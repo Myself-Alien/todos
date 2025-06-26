@@ -1,5 +1,21 @@
+@font-face {
+  font-family: RobotoLight;
+  src: url(../src/Component/fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: RobotoThin;
+  src: url(../src/Component/fonts/Roboto-Thin.ttf);
+}
+.roboto_light
+{
+  font-family: RobotoLight;
+}
+.roboto_thin
+{
+  font-family: RobotoThin;
+}
 .todos
 {
-  background-color: antiquewhite;
+  background-color: #CEAB93;
   height: 100vh;
 }

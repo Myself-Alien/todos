@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
+import '../App.css';
 
 const ToDo = () => {
     const [tasks, setTasks] = useState(() => {
@@ -37,21 +40,27 @@ const ToDo = () => {
 
     return (
         <div className="todos">
-            <h1>todos</h1>
-            <input
-                type="text"
-                placeholder="Enter a task"
-                value={task}
-                onChange={(e) => setTask(e.target.value)}
-            />
-            <button onClick={addTask}>{editingIndex !== null ? "Update Task" : "Add Task"}</button>
-            <ul>
-                {tasks.map((t, index) => (
-                    <li key={index}>
-                        {t} <button onClick={() => editTask(index)}>Edit</button> <button onClick={() => deleteTask(index)}>Delete</button>
-                    </li>
-                ))}
-            </ul>
+            <div className='col-md-4 offset-md-4'>
+                <h1 className='roboto_light pt-2'>todos</h1>
+                <input
+                    type="text"
+                    className='form-control'
+                    placeholder="Enter a task"
+                    value={task}
+                    onChange={(e) => setTask(e.target.value)}
+                />
+                <div className='d-grid mt-2'>
+                    <button onClick={addTask} className='btn btn-primary'>{editingIndex !== null ? "Update Task" : "Add Task"}</button>
+                </div>
+                <ul className='list-group'>
+                    {tasks.map((t, index) => (
+                        <li key={index} className='list-group-item list-group-item-action'>
+                            {t} <button onClick={() => editTask(index)} className='btn'><FontAwesomeIcon icon={faPenToSquare} /></button>
+                            <button onClick={() => deleteTask(index)} className='btn'><FontAwesomeIcon icon={faTrash} /></button>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 };
