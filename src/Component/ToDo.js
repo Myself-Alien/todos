@@ -44,25 +44,25 @@ const ToDo = () => {
                 <h1 className='roboto_light pt-2'>todos</h1>
                 <input
                     type="text"
-                    className='form-control'
+                    className='form-control input'
                     placeholder="Enter a task"
                     value={task}
                     onChange={(e) => setTask(e.target.value)}
                 />
                 <div className='d-grid mt-2'>
-                    <button onClick={addTask} className='btn btn-primary'>{editingIndex !== null ? "Update Task" : "Add Task"}</button>
+                    <button onClick={addTask} className='btn btn-primary task_btn'>{editingIndex !== null ? "Update Task" : "Add Task"}</button>
                 </div>
-                <ul className='list-group mt-2'>
+                <ol className='list-group mt-2'>
                     {tasks.map((t, index) => (
-                        <li key={index} className='list-group-item list-group-item-action'>
+                        <li key={index} className='list-group-item'>
                             <div className="float-start">{t}</div>
-                            <div class="float-end">
-                                <button onClick={() => editTask(index)} className='btn'><FontAwesomeIcon icon={faPenToSquare} /></button>
-                                <button onClick={() => deleteTask(index)} className='btn'><FontAwesomeIcon icon={faTrash} /></button>
+                            <div className="float-end">
+                                <button onClick={() => editTask(index)} className='icons'><FontAwesomeIcon icon={faPenToSquare} /></button>
+                                <button onClick={() => deleteTask(index)} className='icons'><FontAwesomeIcon icon={faTrash} /></button>
                             </div>
                         </li>
                     ))}
-                </ul>
+                </ol>
             </div>
         </div>
     );
