@@ -52,11 +52,14 @@ const ToDo = () => {
                 <div className='d-grid mt-2'>
                     <button onClick={addTask} className='btn btn-primary'>{editingIndex !== null ? "Update Task" : "Add Task"}</button>
                 </div>
-                <ul className='list-group'>
+                <ul className='list-group mt-2'>
                     {tasks.map((t, index) => (
                         <li key={index} className='list-group-item list-group-item-action'>
-                            {t} <button onClick={() => editTask(index)} className='btn'><FontAwesomeIcon icon={faPenToSquare} /></button>
-                            <button onClick={() => deleteTask(index)} className='btn'><FontAwesomeIcon icon={faTrash} /></button>
+                            <div className="float-start">{t}</div>
+                            <div class="float-end">
+                                <button onClick={() => editTask(index)} className='btn'><FontAwesomeIcon icon={faPenToSquare} /></button>
+                                <button onClick={() => deleteTask(index)} className='btn'><FontAwesomeIcon icon={faTrash} /></button>
+                            </div>
                         </li>
                     ))}
                 </ul>
