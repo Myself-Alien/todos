@@ -39,7 +39,7 @@ const ToDo = () => {
     };
 
     return (
-        <div className="todos">
+        <div className="todos pt-4">
             <div className='col-md-4 offset-md-4'>
                 <h1 className='roboto_light pt-2'>todos</h1>
                 <input
