@@ -7,7 +7,7 @@ This app allows users to add, delete, and mark tasks as complete — with persis
 
 ## 📸 Demo
 
-![todos](https://github.com/user-attachments/assets/c6c4574b-09e7-494e-a277-65a7f44abbf6)
+![todos](https://github.com/user-attachments/assets/0a2d1da1-85eb-4ef8-9fa8-0fded7c7aef7)
 
 ---
 
